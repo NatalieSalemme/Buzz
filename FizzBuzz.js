@@ -1,13 +1,21 @@
-for(let number = 1; number <= 100; number++) {
-  if (number % 5 === 0 && number % 3 === 0) {
-    console.log("FizzBuzz");
-  }
-  else if (number % 3 === 0) {
-    console.log("Fizz");
-  } 
-  else if (number % 5 === 0) {
-    console.log("Buzz");
+let endText = document.querySelector('.paragraphText');
+// let loopText = endText.innerHTML;
+
+
+let emptyArr = [];
+for(let i = 1; i <= 100; i++) {
+  emptyArr.push(i);
+}
+resultArr = [];
+for (let i = 1; i < 100; i++) {
+  if(i % 3 === 0 && i % 5 === 0) {
+    resultArr.push(i + " fizzbuzz");
+  } else if(i % 3 === 0) {
+    resultArr.push(i + " fizz");
+  } else if(i % 5 === 0) {
+    resultArr.push(i + " buzz");
   } else {
-    console.log(number);
+    resultArr.push(i);
   }
 }
+endText.innerHTML = resultArr;
