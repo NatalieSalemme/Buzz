@@ -1,21 +1,30 @@
 let endText = document.querySelector('.paragraphText');
-// let loopText = endText.innerHTML;
+let fizz = document.querySelector('#fizz');
+let buzz = document.querySelector('#buzz');
+let fizzbuzz = document.querySelector('#fizzbuzz');
+let everything = document.querySelector('#everything');
+let allButtons = document.querySelector('.allButtons');
 
 
 let emptyArr = [];
-for(let i = 1; i <= 100; i++) {
-  emptyArr.push(i);
-}
-resultArr = [];
-for (let i = 1; i < 100; i++) {
+fizz.addEventListener('click', function() {
+
+  let fizzArr = [];
+  for(let j = 0; j <=100; j++) {
+    emptyArr.push(j);
+  }
+for (let i = 1; i < emptyArr.length; i++) {
   if(i % 3 === 0 && i % 5 === 0) {
-    resultArr.push(i + " fizzbuzz");
+    fizzArr.push(i + " fizzbuzz" + "<br>");
   } else if(i % 3 === 0) {
-    resultArr.push(i + " fizz");
-  } else if(i % 5 === 0) {
-    resultArr.push(i + " buzz");
+    fizzArr.push(i + " fizz" + "<br>");
+  } else if(i % 5 === 0) {//
+    fizzArr.push(i + " buzz" + "<br>");
   } else {
-    resultArr.push(i);
+    fizzArr.push(i + "<br>");
   }
 }
-endText.innerHTML = resultArr;
+
+endText.innerHTML = fizzArr.join('');
+console.log(fizzArr);
+});
