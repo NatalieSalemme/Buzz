@@ -1,0 +1,46 @@
+body {
+  background-color: #edcee2;
+}
+h1  {
+  color: purple;
+}
+.blueText {
+  color: blue;
+  font-size: 20px;
+}
+.redText {
+  color: red;
+  font-size: 25px;
+}
+.orangeText {
+  color: orange;
+  font-size: 30px;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+ul {
+  list-style: none;
+}
+.fixedLegend {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -2em;
+}
+h4 {
+  margin-top: -1em;
+}
+#blueFizz {
+  color: blue;
+}
+#redBuzz {
+  color: red;
+}
+#orangeFizzBuzz {
+  color: orange;
+}
